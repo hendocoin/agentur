@@ -1,35 +1,153 @@
+/* Allgemeine Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+/* Hero Section */
 #hero {
   position: relative;
   height: 100vh;
-  background: url('your-futuristic-video-or-image.mp4') no-repeat center center fixed;
+  background: url('https://via.placeholder.com/1500') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
+  color: white;
+}
+
+#hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+#hero .content {
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
 }
 
 h1 {
-  font-size: 4rem;
-  text-transform: uppercase;
+  font-size: 3rem;
   letter-spacing: 2px;
-  animation: fadeIn 2s ease-in-out;
 }
 
 .cta-button {
-  padding: 20px 40px;
-  font-size: 1.5rem;
+  padding: 15px 30px;
+  font-size: 1.2rem;
   background: rgba(255, 0, 255, 0.8);
   color: white;
   border: 2px solid rgba(255, 0, 255, 0.8);
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
   transition: all 0.3s ease;
 }
 
 .cta-button:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #ff00ff;
+}
+
+/* About Section */
+#about {
+  padding: 50px;
+  text-align: center;
+  background: #222;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Services Section */
+#services {
+  padding: 50px;
+  text-align: center;
+  background: #333;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.service-card {
+  display: inline-block;
+  width: 30%;
+  background: #444;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 0, 255, 0.6);
+}
+
+.service-card h3 {
+  font-size: 1.8rem;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px;
+  background: #111;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 60%;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#contact form button {
+  padding: 15px 30px;
+  background: #ff00ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact form button:hover {
+  background: #ff66ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
