@@ -1,0 +1,35 @@
+#hero {
+  position: relative;
+  height: 100vh;
+  background: url('your-futuristic-video-or-image.mp4') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  background: rgba(255, 0, 255, 0.8);
+  color: white;
+  border: 2px solid rgba(255, 0, 255, 0.8);
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ff00ff;
+}
